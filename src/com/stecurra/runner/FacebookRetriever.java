@@ -33,7 +33,7 @@ public class FacebookRetriever implements CalendarMethod {
 		
 		List<SimpleEvent> events = new ArrayList<>();
 
-		Connection<Event> myEvents = facebookClient.fetchConnection("me/events", Event.class, Parameter.with("fields", "description, name"));
+		Connection<Event> myEvents = facebookClient.fetchConnection("me/events", Event.class, Parameter.with("fields", "description, name, location"));
 		
 		for (Event post : myEvents.getData()){
 			SimpleEvent e = new SimpleEvent();
@@ -41,6 +41,7 @@ public class FacebookRetriever implements CalendarMethod {
 			e.setEventEndDate(post.getEndTime());
 			e.setEventName(post.getName());
 			e.setEventStartTime(post.getStartTime());
+			System.err.println(post.getLocation());
 			events.add(e);
 		}
 		// https://developers.facebook.com/tools/explorer/?method=GET&path=me%2Fevents
