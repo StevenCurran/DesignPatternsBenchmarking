@@ -41,5 +41,6 @@
 	<classpathentry kind="lib" path="libraries/google-api-java-client/libs/xpp3-1.1.4c.jar"/>
 	<classpathentry kind="lib" path="libraries/google-api-java-client/libs/google-api-services-calendar-v3-rev44-1.15.0-rc.jar"/>
 	<classpathentry kind="lib" path="libraries/javaee.jar"/>
+	<classpathentry kind="lib" path="C:/Users/steven/Desktop/DesignPatternsBenchmarking/libraries/microbenchmarks.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
